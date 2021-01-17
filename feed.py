@@ -16,7 +16,7 @@ class TestRtspMediaFactory(GstRtspServer.RTSPMediaFactory):
     def __init__(self):
         super(TestRtspMediaFactory, self).__init__()
 
-    def do_create_element(self):
+    def do_create_element(self, url):
 
         #set mp4 file path to filesrc's location property
         src_demux = f"filesrc location={PATH_TO_VIDEO} ! qtdemux name=demux"
